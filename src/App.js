@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
+
+  const countSheep = function(num) {
+    // Base case
+    if (num.length === 0) {
+        return 'All sheep jumped over the fence';
+    }
+    // General case
+    return num[0] + countSheep(num.slice(1));
+
+}
+
+let lst = [3,2,1];
+console.log(countSheep(lst));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='App'>
+      {/* content goes here */}
+    </main>
   );
 }
 
